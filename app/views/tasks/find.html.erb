@@ -1,0 +1,18 @@
+<h1><%= @task.title %></h1>
+<p><%= @task.details %></p>
+<table>
+  <tbody>
+    <tr>
+      <% if @task.completed == true  %>
+      <td><i class="far fa-check-square"></i></td>
+      <td>This task is completed</td>
+      <% else %>
+      <td><i class="far fa-square"></i></td>
+      <td>This task is not completed</td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+<%= link_to 'Back to list', :back %>
+
+

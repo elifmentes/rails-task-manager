@@ -1,0 +1,18 @@
+<h1>My Tasks</h1>
+<table>
+  <tbody>
+    <% @tasks.each do |task| %>
+    <tr>
+      <% if task.completed == true  %>
+      <td><i class="far fa-check-square"></i></td>
+      <% else %>
+      <td><i class="far fa-square"></i></td>
+      <% end %>
+      <td><%= task.title %></td>
+      <td>
+        <%= link_to 'Find', task_path(task) %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
